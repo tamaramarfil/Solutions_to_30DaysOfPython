@@ -38,9 +38,38 @@ print('La circunferencia del círculo es:', circumference_circle)
 
 #8 Calculate the slope, x-intercept and y-intercept of y = 2x -2
 
+def funcion_afin_x(x):
+    y = (2 * x) - 2
+    return y
+
+def funcion_afin_y(y):
+    x = (y + 2) / 2
+    return x
+
+x_intercept = 0
+y_x_intercept = funcion_afin_x(0)
+print('X Intercept:', x_intercept, y_x_intercept)
+
+y_intercept = 0
+x_y_intercept = funcion_afin_y(0)
+print('Y Intercept:', x_y_intercept, y_intercept, )
+
+slope1 = (y_intercept-y_x_intercept)/(x_y_intercept-x_intercept)
+print('Slope:', slope1)
+
 #9 Slope is (m = y2-y1/x2-x1). Find the slope and Euclidean distance between point (2, 2) and point (6,10)
 
+import numpy as np
+x1, x2, y1, y2 = 2, 6, 2, 10
+slope2 = (y2-y1)/(x2-x1)
+print('Slope:', slope2)
+euc_dist = np.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)
+print('Distance Euclidean:', euc_dist)
+
 #10 Compare the slopes in tasks 8 and 9.
+
+if slope1 == slope2:
+    print('Slopes are correct')
 
 #11
 for x in range(-5,5):
@@ -107,8 +136,5 @@ seconds_to_live = years * 365 * 24 * 60 * 60
 print('Has vivido', seconds_to_live, 'segundos')
 
 #23 Write a Python script that displays the following table
-1 1 1 1 1
-2 1 2 4 8
-3 1 3 9 27
-4 1 4 16 64
-5 1 5 25 125
+for n in range(1, 6):
+    print(n, n**0, n**1, n**2, n**3)
